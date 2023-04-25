@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * p_d - the main fun
- * @d: the var
+ * @i: the var
  * Return: count
  */
 int p_d(va_list i)

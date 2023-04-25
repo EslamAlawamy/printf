@@ -1,5 +1,9 @@
 #include "main.h"
-
+/**
+ * p_i - print int
+ * @i: integer
+ * Return: 0 successful
+*/
 int p_i(va_list i)
 {
 	int arr[10];
