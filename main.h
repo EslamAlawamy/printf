@@ -11,7 +11,8 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 int p_char(va_list ch);
 int p_string(va_list st);
-
+int p_i(va_list i);
+int p_d(va_list d);
 
 /**
  * struct myformat - this is the struct
