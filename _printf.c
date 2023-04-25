@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 		return (-1);
 
 	va_start(ptr, format);
-	for (in = 0; format && format[in]; in++)
+	while (format && format[in])
 	{
 		if (format[in] != '%')
 		{
@@ -65,6 +65,7 @@ int _printf(const char *format, ...)
 				continue;
 			}
 		}
+		in++;
 	}
 	va_end(ptr);
 	return (chcount);
