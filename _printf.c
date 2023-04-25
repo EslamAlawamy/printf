@@ -1,4 +1,4 @@
-#include "main"
+#include "main.c"
 /**
  *func_format - check condetions
  *@format: the syring
