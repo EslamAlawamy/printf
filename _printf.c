@@ -10,6 +10,7 @@ int (*func_format(const char *format))(va_list)
 	print_type p_my_func[] = {
 		{"c", p_char},
 		{"s", p_string},
+		{"d", p_d},
 		{NULL, NULL}
 	};
 
