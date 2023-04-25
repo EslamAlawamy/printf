@@ -1,4 +1,9 @@
 #include "main"
+/**
+ *func_format - check condetions
+ *@format: the syring
+ *Return: the number of printed char
+*/
 int (*func_format(const char *format))(va_list)
 {
 	int index = 0;
@@ -24,7 +29,7 @@ int (*func_format(const char *format))(va_list)
 int _printf(const char *format, ...)
 {
 	va_list ptr;
-    int(*func)(va_list);
+	int (*func)(va_list);
 	unsigned int in = 0, chcount = 0;
 
 	if (format == NULL)
