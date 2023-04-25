@@ -11,7 +11,7 @@ int (*func_format(const char *format))(va_list)
 		{"c", p_char},
 		{"s", p_string},
 		{"d", p_d},
-		{"i", p_i}
+		{"i", p_i},
 		{NULL, NULL}
 	};
 
