@@ -7,16 +7,16 @@
 int p_string(va_list st)
 {
 	char *my_st;
-	int in;
+	int in = 0;
 
 	my_st = va_arg(st, char *);
 	if (my_st == NULL)
 	{
 		my_st = "(null)";
 	}
-	for (in = 0; my_st[in] != '\0'; in++)
+	while (my_st[in])
 	{
-		_putchar(my_st[in]);
+		_putchar(my_st[in++]);
 	}
 	return (in);
 }
