@@ -29,14 +29,12 @@ int _printf(const char *format, ...)
 	va_list fptr;
 	char buffer[1024];
 	int tlen = 0;
-	int i = 0;
+	int i;
 
 	if (format == NULL)
-	{
 		return (-1);
-	}
 	va_start(fptr, format);
-	while (format[i] != '\0')
+	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
 		{
@@ -63,7 +61,6 @@ int _printf(const char *format, ...)
 		}
 		else
 			tlen = tlen + _putchar(format[i]);
-		i++;
 	}
 	va_end(fptr);
 	return (tlen);
