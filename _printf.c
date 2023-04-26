@@ -27,7 +27,7 @@ int print_string(char *string)
 int _printf(const char *format, ...)
 {
 	va_list fptr;
-	char buffer[1024];
+	char buffer[BUFFER];
 	int tlen = 0;
 	int i;
 
