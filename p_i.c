@@ -4,35 +4,34 @@
  * @i: integer
  * Return: 0 successful
 */
-int p_i(va_list i)
+int print_i(va_list i)
 {
-	int arr[10];
-	int j = 0, m = 1000000000, n, sum = 0, count = 0;
+	int a[10];
+	int j = 1, m = 1000000000, n, sum = 0, counter = 0;
 
 	n = va_arg(i, int);
 	if (n < 0)
 	{
-		n = n * -1;
+		n *= -1;
 		_putchar('-');
-		count++;
+		counter++;
 	}
-	arr[0] = n / m;
+	a[0] = n / m;
+
+	for (; j < 10; j++)
+	{
+		m /= 10;
+		a[j] = (n / m) % 10;
+	}
 
 	for (j = 0; j < 10; j++)
 	{
-		m = m / 10;
-		arr[j] = (n / m) % 10;
-	}
-
-	for (j = 0; j < 10; j++)
-	{
-		sum = sum + arr[j];
+		sum += a[j];
 		if (sum != 0 || j == 9)
 		{
-			_putchar('0' + arr[j]);
-			count++;
+			_putchar('0' + a[j]);
+			counter++;
 		}
 	}
-	return (count);
+	return (counter);
 }
-
