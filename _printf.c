@@ -27,6 +27,7 @@ int print_string(char *string)
 int _printf(const char *format, ...)
 {
 	va_list fptr;
+	char buffer[1024];
 	int tlen = 0;
 	int i = 0;
 
@@ -51,13 +52,18 @@ int _printf(const char *format, ...)
 				case '%':
 					tlen = tlen + _putchar('%');
 					break;
+				case 'd':
+				case 'i':
+					int_string(va_arg(fptr, int), buffer);
+					tlen = tlen + print_string(buffer);
+					break;
 				default:
 					return (-1);
 			}
 		}
 		else
 			tlen = tlen + _putchar(format[i]);
-			i++;
+		i++;
 	}
 	va_end(fptr);
 	return (tlen);

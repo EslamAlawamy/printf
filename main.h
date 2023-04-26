@@ -8,6 +8,6 @@
 int _putchar(char c);
 int _printf(const char *format, ...);
 int print_string(char *string);
-void int_to_string(int number, char *buffer);
+void int_string(int number, char *buffer);
 
 #endif
